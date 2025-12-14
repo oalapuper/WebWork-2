@@ -1,90 +1,279 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoffeeMania</title>
     <style>
-        .container{
+        /* Ваши существующие стили */
+        .rectangle-solid {
+            width: 400px;
+            height: 768px;
+            background-color: #415167;
+            margin: 0;
+        }
+        
+        /* Контейнер для всей секции */
+        .complex-section {
+            position: relative; /* Для абсолютного позиционирования дочерних элементов */
+            width: 100%;
+            height: 768px;
+            display: flex;
+        }
+        
+        /* Первый прямоугольник (левый) */
+        .rectangle-solid1 {
+            width: 50%; /* Занимает половину ширины */
+            height: 100%;
+            background-color: #EDF0F5;
+            position: relative; /* Для позиционирования картинки внутри */
+        }
+        
+        /* Второй прямоугольник (правый) */
+        .rectangle-solid2 {
+            width: 50%; /* Занимает вторую половину */
+            height: 100%;
+            background-color: whitesmoke;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 60px;
+            box-sizing: border-box;
+        }
+        
+        /* Картинка поверх rectangle-solid1 */
+        .overlay-image {
+            position: absolute; /* Позиционируем абсолютно внутри rectangle-solid1 */
+            top: 50%; /* Центрируем по вертикали */
+            left: 50%; /* Центрируем по горизонтали */
+            transform: translate(-50%, -50%); /* Точное центрирование */
+            max-width: 80%; /* Не больше 80% ширины родителя */
+            max-height: 80%; /* Не больше 80% высоты родителя */
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        /* Стили для текста в rectangle-solid2 */
+        .text-content {
+            max-width: 500px;
+        }
+        
+        .text-content h2 {
+            font-size: 36px;
+            color: #415167;
+            margin-bottom: 20px;
+            font-weight: 900;
+        }
+        
+        .text-content h3 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        
+        .text-content p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .content-row {
+            display: flex;
+            align-items: center; 
+            gap: 0px; 
+        }
+        
+        .coffee-gallery {
             display: flex;
             justify-content: center;
-            gap: 40px;
-            padding: 50[x]
-            flex-wrapL wrap;
+            gap: 20px; 
+            flex-wrap: wrap;
+            margin: 30px auto;
+            max-width: 1200px; 
         }
-        .item{
-            width: 200px;
-            text-align: center;
+        
+        
+        
+        
+        
+        
+        .coffee-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.4;
+            margin: 0;
         }
-        .item img{
-            width: 100px;
-            height: 100px;
-            margin-bottom: 15 px;
+        
+        @media (max-width: 1100px) {
+            .coffee-gallery {
+                justify-content: space-around;
+            }
         }
-        .text-block{
-            background: #f5f5f5;
-            padding: 20px;
-            border-radius:  10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0,1);
+        
+        @media (max-width: 768px) {
+            .complex-section {
+                flex-direction: column;
+                height: auto;
+            }
+            
+            .rectangle-solid1,
+            .rectangle-solid2 {
+                width: 100%;
+                height: 400px;
+            }
+            
+            .overlay-image {
+                max-width: 90%;
+                max-height: 70%;
+            }
+            
+            .coffee-gallery {
+                flex-direction: column; 
+                align-items: center;
+            }
+            
+            .coffee-card {
+                width: 90%; 
+                max-width: 300px;
+            }
+            
+            .text-content {
+                padding: 30px;
+            }
+            
+            .text-content h2 {
+                font-size: 28px;
+            }
+            
+            .text-content h3 {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
-<head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoffeMania</title>
-    
-</head>
-<body , style="background-color:aliceblue">
-    
-    <header>Cofee in everywhere</header>
-    <section>
-    <img src="/assets/icons/LOGO.png">
-    <section style="display: flex; align-items: flex-start; gap:0px; text-align:end">
-        <p style="text-align:end"> <img src="/assets/img/Баннер.png">
-            <div style="width:500px; height: 800px; background: #415167" ></div>
-    </section>
-</body>
 <body>
+    <header>
+        <img src="assets/icons/LOGO.png" alt="Логотип CoffeeMania">
+    </header>
+    <main>
+        <section>
+            <div class="content-row">
+                <img src="assets/img/Баннер.png" alt="Баннер">
+                <div class="rectangle-solid"></div>
+            </div>
+        </section>
+        
+        <section>
+            <p style="text-align: center; font-size: 24px; font-weight: bold;">
+                Your Personalized Coffee
+            </p>
+            <p style="text-align: center; font-size: 18px; color: #666;">
+                COFFEE BUILD YOUR BASE
+            </p>
+        </section>
+        <section>
+            <p style="text-align: center;">
+                <img src="assets/icons/IC (1).png">
+                <img src="assets/icons/IC (2).png">
+                <img src="assets/icons/IC (3).png">
+                <img src="assets/icons/ic.png">
+            </p>
+        </section>
+        <section>
+            <div class="coffee-gallery">
+                <!-- Карточка 1 -->
+                <div class="coffee-card">
+                    <img src="assets/img/IMAGE (2).png" alt="Кофе 1">
+                    <h4>Упаковка X</h4>
+                    <p>Сложно сказать, почему предприниматели </p>
+                    <p>в сети интернет будут ограничены </p>
+                    <p>исключительно образом мышления!</p>
+                </div>
+                
+                <!-- Карточка 2 -->
+                <div class="coffee-card">
+                    <img src="assets/img/IMAGE (3).png" alt="Кофе 2">
+                    <h4>Упаковка X</h4>
+                    <p>Внезапно, базовые сценарии </p>
+                    <p>поведения пользователей </p>
+                    <p>своевременно верифицированы.</p>
+                </div>
+                
+                <!-- Карточка 3 -->
+                <div class="coffee-card">
+                    <img src="assets/img/IMAGE.png" alt="Кофе 3">
+                    <h4>Упаковка X</h4>
+                    <p>Безусловно, сплочённость команды</p>
+                    <p>профессионалов напрямую зависит </p>
+                    <p>от первоочередных требований.</p>
+                    
+                </div>
+                
+                <!-- Карточка 4 -->
+                <div class="coffee-card">
+                    <img src="assets/img/IMAGE.png" alt="Кофе 4">
+                    <h4>Упаковка X</h4>
+                    <p>Безусловно, понимание сутиы</p>
+                    <p>ресурсосберегающих технологий однозначно</p>
+                    <p>фиксирует необходимость инновационных</p>
+                    <p>методов управления процессами.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- НОВАЯ СЕКЦИЯ: Картинка на rectangle-solid1 + rectangle-solid2 с текстом -->
+        <section class="complex-section">
+            <!-- Левый блок с картинкой поверх -->
+            <div class="rectangle-solid1">
+                <img src="assets/img/pr-0018-r.png" alt="Чашка кофе" class="overlay-image">
+            </div>
+            
+            <!-- Правый блок с текстом -->
+            <div class="rectangle-solid2">
+                <div class="text-content">
+                    <h2>67.000.000</h2>
+                    <h3>Mmmm, So Delicious</h3>
+                    <p>Каждый из нас понимает очевидную вещь: новая модель организационной деятельности влечет за собой процесс внедрения и модернизации модели развития.</p>
+                    <p>В целом, конечно, существующая теория говорит о возможностях прогресса профессионального сообщества.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="coffee-gallery">
+                
+                <div class="coffee-card">
+                    <img src="assets/img/image (7).png" alt="Кофе 2">
+                    <h4>Упаковка X</h4>
+                    <p>Есть над чем задуматься:</p>
+                    <p>действия представителей оппозиции</p>
+                    <p>формируют глобальную экономическую сеть</p>
+                    <p>и при этом — функционально разнесены на независимые элементы.</p>
+                </div>
+                <div class="coffee-card">
+                    <img src="assets/img/image (6).png" alt="Кофе 3">
+                    <h4>Упаковка X</h4>
+                    <p>Но явные признаки победы</p>
+                    <p>институционализации будут заблокированы</p>
+                    <p>в рамках своих собственных рациональных ограничений!</p>
+                </div>
+                <div class="coffee-card">
+                    <img src="assets/img/image (8).png" alt="Кофе 4">
+                    <h4>Упаковка X</h4>
+                    <p>Мы вынуждены отталкиваться от того,</p>
+                    <p>что консультация с широким активом</p>
+                    <p>озволяет выполнить важные задания</p>
+                    <p>по разработке глубокомысленных рассуждений.</p>
+                </div>
+            </div>
+        </section>
+    </main>
     
-    <section class="container">
-        <div class="item">
-            <img src="/assets/icons/ic.png" alt="1">
-            <div class="text-block">
-                <h3>Text 1</h3>
-                <p>XXXXXXXX</p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="/assets/icons/IC (1).png" alt="2">
-            <div class="text-block">
-                <h3>Text 1</h3>
-                <p>XXXXXXXX</p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="/assets/icons/IC (2).png" alt="3">
-            <div class="text-block">
-                <h3>Text 1</h3>
-                <p>XXXXXXXX</p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="/assets/icons/IC (3).png" alt="4">
-            <div class="text-block">
-                <h3>Text 1</h3>
-                <p>XXXXXXXX</p>
-            </div>
-        </div>
-    </section>
-</body>
-<body>
-    <p style="text-align:center;"><button type="button", style="height: 600px; width:300px"><img src="assets/img/image (1).png">1</button>
-    <button type="button", style="height: 600px; width:300px"><img src="assets/img/image (2).png"> 2 </button>
-    <button type="button", style="height:600px; width:300px"><img src="assets/img/IMAGE (3).png"> 3 </button>
-    <button type="button", style="height: 600px; width:300px"><img src="assets/img/IMAGE.png"> 4 </button>
+    <footer>
+        
+            <section><p style="text-align: center;">All laws is under protected!</p></section>
+        
+    </footer>
 </body>
 </html>
-
-<div class="c1">
-
-</div>
-<div class="c2", id="left"></div>
