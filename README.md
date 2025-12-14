@@ -4,5 +4,5 @@
  
  ## Links
 
- - https://github.com/oalapuper/WebWork-2
+ - [Публичная страница на GitHub Pages](https://github.com/oalapuper/WebWork-2)
  
