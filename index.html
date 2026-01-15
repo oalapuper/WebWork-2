@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoffeeMania</title>
+    <link rel="stylesheet" href="styles/style.css">
+    
     <style>
-        /* Ваши существующие стили */
         .rectangle-solid {
             width: 400px;
             height: 768px;
@@ -13,25 +14,25 @@
             margin: 0;
         }
         
-        /* Контейнер для всей секции */
+       
         .complex-section {
-            position: relative; /* Для абсолютного позиционирования дочерних элементов */
+            position: relative;
             width: 100%;
             height: 768px;
             display: flex;
         }
         
-        /* Первый прямоугольник (левый) */
+       
         .rectangle-solid1 {
-            width: 50%; /* Занимает половину ширины */
+            width: 50%; 
             height: 100%;
             background-color: #EDF0F5;
-            position: relative; /* Для позиционирования картинки внутри */
+            position: relative; 
         }
         
-        /* Второй прямоугольник (правый) */
+        
         .rectangle-solid2 {
-            width: 50%; /* Занимает вторую половину */
+            width: 50%; 
             height: 100%;
             background-color: whitesmoke;
             display: flex;
@@ -41,19 +42,18 @@
             box-sizing: border-box;
         }
         
-        /* Картинка поверх rectangle-solid1 */
+        
         .overlay-image {
-            position: absolute; /* Позиционируем абсолютно внутри rectangle-solid1 */
-            top: 50%; /* Центрируем по вертикали */
-            left: 50%; /* Центрируем по горизонтали */
-            transform: translate(-50%, -50%); /* Точное центрирование */
-            max-width: 80%; /* Не больше 80% ширины родителя */
-            max-height: 80%; /* Не больше 80% высоты родителя */
+            position: absolute;
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);
+            max-width: 80%; 
+            max-height: 80%; 
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
         
-        /* Стили для текста в rectangle-solid2 */
         .text-content {
             max-width: 500px;
         }
@@ -93,12 +93,6 @@
             margin: 30px auto;
             max-width: 1200px; 
         }
-        
-        
-        
-        
-        
-        
         .coffee-card p {
             color: #666;
             font-size: 14px;
@@ -154,8 +148,37 @@
     </style>
 </head>
 <body>
-    <header>
-        <img src="assets/icons/LOGO.png" alt="Логотип CoffeeMania">
+        <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="header__container">
+            <a href="#hero" class="header__logo">
+                <img src="assets/icons/LOGO.png" alt="CoffeeMania" class="header__logo-img">
+                CoffeeMania
+            </a>
+            
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item nav__item--active">
+                        <a href="#hero" class="nav__link">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#features" class="nav__link">Особенности</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#products" class="nav__link">Каталог</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">О нас</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <header class = "header">
+        <img src="assets/icons/LOGO.png" alt="Логотип CoffeeMania" class = "header_logo">
     </header>
     <main>
         <section>
@@ -165,7 +188,7 @@
             </div>
         </section>
         
-        <section>
+        <section >
             <p style="text-align: center; font-size: 24px; font-weight: bold;">
                 Your Personalized Coffee
             </p>
@@ -184,41 +207,44 @@
         <section>
             <div class="coffee-gallery">
                 <!-- Карточка 1 -->
-                <div class="coffee-card">
+                <div class="coffee-card card fade-in">
                     <img src="assets/img/IMAGE (2).png" alt="Кофе 1">
                     <h4>Упаковка X</h4>
                     <p>Сложно сказать, почему предприниматели </p>
                     <p>в сети интернет будут ограничены </p>
                     <p>исключительно образом мышления!</p>
+                    <button class="button">Купить</button>
                 </div>
                 
                 <!-- Карточка 2 -->
-                <div class="coffee-card">
+                <div class="coffee-card card fade-in">
                     <img src="assets/img/IMAGE (3).png" alt="Кофе 2">
                     <h4>Упаковка X</h4>
                     <p>Внезапно, базовые сценарии </p>
                     <p>поведения пользователей </p>
                     <p>своевременно верифицированы.</p>
+                    <button class="button">Купить</button>
                 </div>
                 
                 <!-- Карточка 3 -->
-                <div class="coffee-card">
+                <div class="coffee-card card fade-in">
                     <img src="assets/img/IMAGE.png" alt="Кофе 3">
                     <h4>Упаковка X</h4>
                     <p>Безусловно, сплочённость команды</p>
                     <p>профессионалов напрямую зависит </p>
                     <p>от первоочередных требований.</p>
-                    
+                    <button class="button">Купить</button>
                 </div>
                 
                 <!-- Карточка 4 -->
-                <div class="coffee-card">
+                <div class="coffee-card card fade-in">
                     <img src="assets/img/IMAGE.png" alt="Кофе 4">
                     <h4>Упаковка X</h4>
                     <p>Безусловно, понимание сутиы</p>
                     <p>ресурсосберегающих технологий однозначно</p>
                     <p>фиксирует необходимость инновационных</p>
                     <p>методов управления процессами.</p>
+                    <button class="button">Купить</button>
                 </div>
             </div>
         </section>
