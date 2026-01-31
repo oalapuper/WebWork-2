@@ -5,258 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoffeeMania</title>
     <link rel="stylesheet" href="styles/style.css">
-    
-    <style>
-        .rectangle-solid {
-            width: 400px;
-            height: 768px;
-            background-color: #415167;
-            margin: 0;
-        }
-        
-       
-        .complex-section {
-            position: relative;
-            width: 100%;
-            height: 768px;
-            display: flex;
-        }
-        
-       
-        .rectangle-solid1 {
-            width: 50%; 
-            height: 100%;
-            background-color: #EDF0F5;
-            position: relative; 
-        }
-        
-        
-        .rectangle-solid2 {
-            width: 50%; 
-            height: 100%;
-            background-color: whitesmoke;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 60px;
-            box-sizing: border-box;
-        }
-        
-        
-        .overlay-image {
-            position: absolute;
-            top: 50%; 
-            left: 50%; 
-            transform: translate(-50%, -50%);
-            max-width: 80%; 
-            max-height: 80%; 
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-        
-        .text-content {
-            max-width: 500px;
-        }
-        
-        .text-content h2 {
-            font-size: 36px;
-            color: #415167;
-            margin-bottom: 20px;
-            font-weight: 900;
-        }
-        
-        .text-content h3 {
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 30px;
-            font-weight: 600;
-        }
-        
-        .text-content p {
-            font-size: 18px;
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-
-        .content-row {
-            display: flex;
-            align-items: center; 
-            gap: 0px; 
-        }
-        
-        .coffee-gallery {
-            display: flex;
-            justify-content: center;
-            gap: 20px; 
-            flex-wrap: wrap;
-            margin: 30px auto;
-            max-width: 1200px; 
-        }
-        .coffee-card p {
-            color: #666;
-            font-size: 14px;
-            line-height: 1.4;
-            margin: 0;
-        }
-        
-        @media (max-width: 1100px) {
-            .coffee-gallery {
-                justify-content: space-around;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .complex-section {
-                flex-direction: column;
-                height: auto;
-            }
-            
-            .rectangle-solid1,
-            .rectangle-solid2 {
-                width: 100%;
-                height: 400px;
-            }
-            
-            .overlay-image {
-                max-width: 90%;
-                max-height: 70%;
-            }
-            
-            .coffee-gallery {
-                flex-direction: column; 
-                align-items: center;
-            }
-            
-            .coffee-card {
-                width: 90%; 
-                max-width: 300px;
-            }
-            
-            .text-content {
-                padding: 30px;
-            }
-            
-            .text-content h2 {
-                font-size: 28px;
-            }
-            
-            .text-content h3 {
-                font-size: 20px;
-            }
-        }
-    </style>
 </head>
 <body>
-        <!-- HEADER -->
-    <header class="header" id="header">
-        <div class="header__container">
-            <a href="#hero" class="header__logo">
-                <img src="assets/icons/LOGO.png" alt="CoffeeMania" class="header__logo-img">
-                CoffeeMania
-            </a>
-            
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item nav__item--active">
-                        <a href="#hero" class="nav__link">Главная</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#features" class="nav__link">Особенности</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#products" class="nav__link">Каталог</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">О нас</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link">Контакты</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#home" class="nav-link">Главная</a></li>
+                <li class="nav-item"><a href="#features" class="nav-link">Особенности</a></li>
+                <li class="nav-item"><a href="#products" class="nav-link">Каталог</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">О нас</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Контакты</a></li>
+            </ul>
+        </nav>
     </header>
-    <header class = "header">
-        <img src="assets/icons/LOGO.png" alt="Логотип CoffeeMania" class = "header_logo">
-    </header>
+
     <main>
-        <section>
+        <section id="home">
             <div class="content-row">
                 <img src="assets/img/Баннер.png" alt="Баннер">
                 <div class="rectangle-solid"></div>
             </div>
         </section>
-        
-        <section >
-            <p style="text-align: center; font-size: 24px; font-weight: bold;">
-                Your Personalized Coffee
-            </p>
-            <p style="text-align: center; font-size: 18px; color: #666;">
-                COFFEE BUILD YOUR BASE
-            </p>
+        <section class="section-title">
+            <p class="main-title">Your Personalized Coffee</p>
+            <p class="subtitle">COFFEE BUILD YOUR BASE</p>
         </section>
-        <section>
-            <p style="text-align: center;">
-                <img src="assets/icons/IC (1).png">
-                <img src="assets/icons/IC (2).png">
-                <img src="assets/icons/IC (3).png">
-                <img src="assets/icons/ic.png">
-            </p>
+        <section id="features">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <img src="assets/icons/IC (1).png" alt="Иконка 1">
+                    <h4>Проверенный источник</h4>
+                    <p>Кофе от проверенных фермеров</p>
+                </div>
+                <div class="feature-card">
+                    <img src="assets/icons/IC (2).png" alt="Иконка 2">
+                    <h4>Идеальная обжарка</h4>
+                    <p>Контроль на каждом этапе</p>
+                </div>
+                <div class="feature-card">
+                    <img src="assets/icons/IC (3).png" alt="Иконка 3">
+                    <h4>Отборные зерна</h4>
+                    <p>Только зерна высшего качества</p>
+                </div>
+                <div class="feature-card">
+                    <img src="assets/icons/ic.png" alt="Иконка 4">
+                    <h4>Свежая упаковка</h4>
+                    <p>Герметичная упаковка для свежести</p>
+                </div>
+            </div>
         </section>
-        <section>
+        <section id="products">
             <div class="coffee-gallery">
                 <!-- Карточка 1 -->
-                <div class="coffee-card card fade-in">
+                <div class="coffee-card">
                     <img src="assets/img/IMAGE (2).png" alt="Кофе 1">
                     <h4>Упаковка X</h4>
-                    <p>Сложно сказать, почему предприниматели </p>
-                    <p>в сети интернет будут ограничены </p>
+                    <p>Сложно сказать, почему предприниматели</p>
+                    <p>в сети интернет будут ограничены</p>
                     <p>исключительно образом мышления!</p>
-                    <button class="button">Купить</button>
+                    <button class="buy-button">Купить</button>
                 </div>
-                
-                <!-- Карточка 2 -->
-                <div class="coffee-card card fade-in">
+                <div class="coffee-card">
                     <img src="assets/img/IMAGE (3).png" alt="Кофе 2">
                     <h4>Упаковка X</h4>
-                    <p>Внезапно, базовые сценарии </p>
-                    <p>поведения пользователей </p>
+                    <p>Внезапно, базовые сценарии</p>
+                    <p>поведения пользователей</p>
                     <p>своевременно верифицированы.</p>
-                    <button class="button">Купить</button>
+                    <button class="buy-button">Купить</button>
                 </div>
-                
-                <!-- Карточка 3 -->
-                <div class="coffee-card card fade-in">
+                <div class="coffee-card">
                     <img src="assets/img/IMAGE.png" alt="Кофе 3">
                     <h4>Упаковка X</h4>
                     <p>Безусловно, сплочённость команды</p>
-                    <p>профессионалов напрямую зависит </p>
+                    <p>профессионалов напрямую зависит</p>
                     <p>от первоочередных требований.</p>
-                    <button class="button">Купить</button>
+                    <button class="buy-button">Купить</button>
                 </div>
-                
-                <!-- Карточка 4 -->
-                <div class="coffee-card card fade-in">
+                <div class="coffee-card">
                     <img src="assets/img/IMAGE.png" alt="Кофе 4">
                     <h4>Упаковка X</h4>
-                    <p>Безусловно, понимание сутиы</p>
+                    <p>Безусловно, понимание сути</p>
                     <p>ресурсосберегающих технологий однозначно</p>
                     <p>фиксирует необходимость инновационных</p>
                     <p>методов управления процессами.</p>
-                    <button class="button">Купить</button>
+                    <button class="buy-button">Купить</button>
                 </div>
             </div>
         </section>
-        
-        <!-- НОВАЯ СЕКЦИЯ: Картинка на rectangle-solid1 + rectangle-solid2 с текстом -->
-        <section class="complex-section">
-            <!-- Левый блок с картинкой поверх -->
+        <section class="complex-section" id="about">
             <div class="rectangle-solid1">
                 <img src="assets/img/pr-0018-r.png" alt="Чашка кофе" class="overlay-image">
             </div>
-            
-            <!-- Правый блок с текстом -->
             <div class="rectangle-solid2">
                 <div class="text-content">
                     <h2>67.000.000</h2>
@@ -266,9 +105,9 @@
                 </div>
             </div>
         </section>
-        <section>
+        
+        <section class="more-products">
             <div class="coffee-gallery">
-                
                 <div class="coffee-card">
                     <img src="assets/img/image (7).png" alt="Кофе 2">
                     <h4>Упаковка X</h4>
@@ -276,6 +115,7 @@
                     <p>действия представителей оппозиции</p>
                     <p>формируют глобальную экономическую сеть</p>
                     <p>и при этом — функционально разнесены на независимые элементы.</p>
+                    <button class="buy-button">Купить</button>
                 </div>
                 <div class="coffee-card">
                     <img src="assets/img/image (6).png" alt="Кофе 3">
@@ -283,6 +123,7 @@
                     <p>Но явные признаки победы</p>
                     <p>институционализации будут заблокированы</p>
                     <p>в рамках своих собственных рациональных ограничений!</p>
+                    <button class="buy-button">Купить</button>
                 </div>
                 <div class="coffee-card">
                     <img src="assets/img/image (8).png" alt="Кофе 4">
@@ -291,15 +132,47 @@
                     <p>что консультация с широким активом</p>
                     <p>озволяет выполнить важные задания</p>
                     <p>по разработке глубокомысленных рассуждений.</p>
+                    <button class="buy-button">Купить</button>
                 </div>
+            </div>
+        </section>
+                <!-- ===== ШАГ 4: MASONRY-РАСКЛАДКА ===== -->
+        <section class="masonry-section">
+            <h2 class="masonry-title">Наши статьи о кофе</h2>
+            <p class="masonry-subtitle">Полезные материалы разного объема</p>
+            <div class="masonry-grid">
+                <article class="masonry-item masonry-item--short">
+                    <h3>Краткая история кофе</h3>
+                    <p>Открытие кофе и его путь по миру.</p>
+                </article>
+                <article class="masonry-item masonry-item--tall">
+                    <h3>Способы заваривания</h3>
+                    <p>Подробное руководство по всем методам заваривания: френч-пресс, кемекс, аэропресс, пуровер. Советы по помолу и температуре воды.</p>
+                </article>
+                <article class="masonry-item">
+                    <h3>Выбор зерен</h3>
+                    <p>Как выбирать кофе по степени обжарки, региону происхождения и вкусовому профилю.</p>
+                </article>
+                <article class="masonry-item masonry-item--very-tall">
+                    <h3>Полное руководство по латте-арт</h3>
+                    <p>От основ до продвинутых техник. Инструменты, текстура молока, основные фигуры (сердце, тюльпан, розетта). Пошаговые фото и видео.</p>
+                </article>
+                <article class="masonry-item masonry-item--short">
+                    <h3>Кофе и здоровье</h3>
+                    <p>Последние исследования о влиянии кофеина.</p>
+                </article>
+                <article class="masonry-item masonry-item--tall">
+                    <h3>Экскурсия на ферму</h3>
+                    <p>Как выращивают и собирают кофе в Колумбии. Фоторепортаж с плантаций и интервью с фермерами.</p>
+                </article>
             </div>
         </section>
     </main>
     
-    <footer>
-        
-            <section><p style="text-align: center;">All laws is under protected!</p></section>
-        
+    <footer id="contact">
+        <section class="footer-section">
+            <p class="footer-text">All laws is under protected!</p>
+        </section>
     </footer>
 </body>
 </html>
