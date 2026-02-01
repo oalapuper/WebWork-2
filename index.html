@@ -4,25 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoffeeMania</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 1024px)">
 </head>
 <body>
     <header class="header">
-        <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a href="#home" class="nav-link">Главная</a></li>
-                <li class="nav-item"><a href="#features" class="nav-link">Особенности</a></li>
-                <li class="nav-item"><a href="#products" class="nav-link">Каталог</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link">О нас</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Контакты</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <div class="header__inner">
+                <a href="#" class="logo">
+                    <h1>CoffeeMania</h1>
+                </a>
+                
+                <!-- Гамбургер-кнопка -->
+                <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                </button>
+                
+                <!-- Основная навигация -->
+                <nav class="nav" id="mainNav">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#home" class="nav-link active">Главная</a></li>
+                        <li class="nav-item"><a href="#features" class="nav-link">Особенности</a></li>
+                        <li class="nav-item"><a href="#products" class="nav-link">Каталог</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link">О нас</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link">Контакты</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Кнопка CTA (только для десктопа) -->
+                <button class="btn btn-primary header__cta">Заказать</button>
+            </div>
+        </div>
     </header>
 
     <main>
         <section id="home">
             <div class="content-row">
-                <img src="assets/img/Баннер.png" alt="Баннер">
+                <img src="assets/img/Баннер.png" alt="Баннер CoffeeMania">
                 <div class="rectangle-solid"></div>
             </div>
         </section>
@@ -33,22 +56,22 @@
         <section id="features">
             <div class="features-grid">
                 <div class="feature-card">
-                    <img src="assets/icons/IC (1).png" alt="Иконка 1">
+                    <img src="assets/icons/IC (1).png" alt="Иконка проверенного источника">
                     <h4>Проверенный источник</h4>
                     <p>Кофе от проверенных фермеров</p>
                 </div>
                 <div class="feature-card">
-                    <img src="assets/icons/IC (2).png" alt="Иконка 2">
+                    <img src="assets/icons/IC (2).png" alt="Иконка идеальной обжарки">
                     <h4>Идеальная обжарка</h4>
                     <p>Контроль на каждом этапе</p>
                 </div>
                 <div class="feature-card">
-                    <img src="assets/icons/IC (3).png" alt="Иконка 3">
+                    <img src="assets/icons/IC (3).png" alt="Иконка отборных зерен">
                     <h4>Отборные зерна</h4>
                     <p>Только зерна высшего качества</p>
                 </div>
                 <div class="feature-card">
-                    <img src="assets/icons/ic.png" alt="Иконка 4">
+                    <img src="assets/icons/ic.png" alt="Иконка свежей упаковки">
                     <h4>Свежая упаковка</h4>
                     <p>Герметичная упаковка для свежести</p>
                 </div>
@@ -58,7 +81,7 @@
             <div class="coffee-gallery">
                 <!-- Карточка 1 -->
                 <div class="coffee-card">
-                    <img src="assets/img/IMAGE (2).png" alt="Кофе 1">
+                    <img src="assets/img/IMAGE (2).png" alt="Кофе 1 - Упаковка X">
                     <h4>Упаковка X</h4>
                     <p>Сложно сказать, почему предприниматели</p>
                     <p>в сети интернет будут ограничены</p>
@@ -66,7 +89,7 @@
                     <button class="buy-button">Купить</button>
                 </div>
                 <div class="coffee-card">
-                    <img src="assets/img/IMAGE (3).png" alt="Кофе 2">
+                    <img src="assets/img/IMAGE (3).png" alt="Кофе 2 - Упаковка X">
                     <h4>Упаковка X</h4>
                     <p>Внезапно, базовые сценарии</p>
                     <p>поведения пользователей</p>
@@ -74,7 +97,7 @@
                     <button class="buy-button">Купить</button>
                 </div>
                 <div class="coffee-card">
-                    <img src="assets/img/IMAGE.png" alt="Кофе 3">
+                    <img src="assets/img/IMAGE.png" alt="Кофе 3 - Упаковка X">
                     <h4>Упаковка X</h4>
                     <p>Безусловно, сплочённость команды</p>
                     <p>профессионалов напрямую зависит</p>
@@ -82,7 +105,7 @@
                     <button class="buy-button">Купить</button>
                 </div>
                 <div class="coffee-card">
-                    <img src="assets/img/IMAGE.png" alt="Кофе 4">
+                    <img src="assets/img/IMAGE.png" alt="Кофе 4 - Упаковка X">
                     <h4>Упаковка X</h4>
                     <p>Безусловно, понимание сути</p>
                     <p>ресурсосберегающих технологий однозначно</p>
@@ -109,7 +132,7 @@
         <section class="more-products">
             <div class="coffee-gallery">
                 <div class="coffee-card">
-                    <img src="assets/img/image (7).png" alt="Кофе 2">
+                    <img src="assets/img/image (7).png" alt="Кофе 5 - Упаковка X">
                     <h4>Упаковка X</h4>
                     <p>Есть над чем задуматься:</p>
                     <p>действия представителей оппозиции</p>
@@ -118,7 +141,7 @@
                     <button class="buy-button">Купить</button>
                 </div>
                 <div class="coffee-card">
-                    <img src="assets/img/image (6).png" alt="Кофе 3">
+                    <img src="assets/img/image (6).png" alt="Кофе 6 - Упаковка X">
                     <h4>Упаковка X</h4>
                     <p>Но явные признаки победы</p>
                     <p>институционализации будут заблокированы</p>
@@ -126,7 +149,7 @@
                     <button class="buy-button">Купить</button>
                 </div>
                 <div class="coffee-card">
-                    <img src="assets/img/image (8).png" alt="Кофе 4">
+                    <img src="assets/img/image (8).png" alt="Кофе 7 - Упаковка X">
                     <h4>Упаковка X</h4>
                     <p>Мы вынуждены отталкиваться от того,</p>
                     <p>что консультация с широким активом</p>
@@ -136,7 +159,8 @@
                 </div>
             </div>
         </section>
-                <!-- ===== ШАГ 4: MASONRY-РАСКЛАДКА ===== -->
+        
+        <!-- ===== ШАГ 4: MASONRY-РАСКЛАДКА ===== -->
         <section class="masonry-section">
             <h2 class="masonry-title">Наши статьи о кофе</h2>
             <p class="masonry-subtitle">Полезные материалы разного объема</p>
@@ -174,5 +198,11 @@
             <p class="footer-text">All laws is under protected!</p>
         </section>
     </footer>
+    
+    <!-- Кнопка "Наверх" -->
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
+    
+    <!-- Подключение JavaScript -->
+    <script src="scripts/menu.js"></script>
 </body>
 </html>
